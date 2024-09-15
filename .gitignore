@@ -1,7 +1,7 @@
-seed3/extracted_de/
-seed3/sub_dependent/
-seed3/sub_independent/
+seed3/extracted_de/*
+seed3/sub_dependent/*
+seed3/sub_independent/*
 
-seed4/extracted_de/
-seed4/sub_dependent/
-seed4/sub_independent/
+seed4/extracted_de/*
+seed4/sub_dependent/*
+seed4/sub_independent/*
