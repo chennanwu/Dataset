@@ -1,7 +1,7 @@
 import numpy as np
 import torch
 import torch.nn as nn
-from sklearn import svm
+from sklearn.svm import LinearSVC
 from sklearn.decomposition import PCA
 from sklearn.metrics import confusion_matrix, classification_report
 import pickle
@@ -42,7 +42,7 @@ def linear_svm(data_path, temporal_process):
         print(f"train_data: {train_data.shape}, test_data: {test_data.shape}")
 
         # 定义svm分类器
-        svc_classifier = svm.SVC(C=1, kernel='linear')   # 创建一个SVM分类器实例
+        svc_classifier = LinearSVC(C=1, max_iter=10000, dual=False)   # 创建一个SVM分类器实例
         svc_classifier.fit(train_data, train_label)      # 使用训练数据和标签来训练SVM模型
         pred_label = svc_classifier.predict(test_data)   # 使用训练好的模型对测试数据进行预测
         # print(confusion_matrix(test_label, pred_label))
